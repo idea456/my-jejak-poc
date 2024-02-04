@@ -34,9 +34,9 @@ const LiveMap = () => {
                 mapboxAccessToken={mapboxToken}
                 mapStyle='mapbox://styles/mapbox/streets-v12'
                 initialViewState={{
-                    longitude: -122.4,
-                    latitude: 37.8,
-                    zoom: 14,
+                    latitude: 3.168829917907715,
+                    longitude: 101.69650268554688,
+                    zoom: 15,
                 }}
                 style={{ width: "100vw", height: "100vh" }}
             >
