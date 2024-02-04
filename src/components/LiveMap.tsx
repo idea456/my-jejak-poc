@@ -43,12 +43,14 @@ const LiveMap = () => {
                 <GeolocateControl position='top-left' />
                 <NavigationControl position='top-left' />
                 {feeds.buses.map((feed) => {
-                    const color = generateColorFromString(feed.trip?.routeId);
+                    const color = generateColorFromString(
+                        feed.trip?.routeId || "",
+                    );
                     return (
                         <Marker
                             key={feed.id}
-                            longitude={feed.position?.longitude}
-                            latitude={feed.position?.latitude}
+                            longitude={feed.position?.longitude || 0}
+                            latitude={feed.position?.latitude || 0}
                             anchor='bottom'
                         >
                             <svg
